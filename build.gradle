@@ -1,0 +1,30 @@
+
+plugins {
+  id "org.springframework.boot" version "1.5.2.RELEASE"
+}
+
+apply plugin:"groovy"
+version "0.1"
+group "neo4j.movies"
+
+
+repositories {
+    mavenLocal()
+    maven { url "https://repo.grails.org/grails/core" }
+}
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-logging"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-autoconfigure"
+    compile "org.springframework.boot:spring-boot-starter-tomcat"
+
+    compile("org.grails:gorm-neo4j-spring-boot:$gormVersion")
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4-rc-1')
+    testCompile('org.spockframework:spock-spring:1.1-groovy-2.4-rc-1')
+    compile "org.springframework.boot:spring-boot-starter-test"
+
+}
+
+springBoot {
+    mainClass = "neo4j.movies.SampleMovieApplication"
+}

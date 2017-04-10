@@ -1,0 +1,5 @@
+Movies Example Application
+==========================
+
+This example implements the Neo4j Movies sample application using Spring Boot 1.5.x, GORM 6.1.x and Neo4j 3.1.x.
+
